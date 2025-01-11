@@ -9,12 +9,17 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        buttontext: "1.25rem",
+        headertext: "3.1rem",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         darktop: "var(--darktop)",
         lighterdarktop: "var(--lighterdarktop)",
         greytext: "var(--greytext)",
+        pjgreen: "var(--pjgreen)",
       },
     },
   },
