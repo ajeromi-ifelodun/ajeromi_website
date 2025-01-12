@@ -3,7 +3,7 @@ import DepsCard from '../_shared/cards/depscard';
 
 const OurDeps = () => {
   return (
-    <div className="parent-wrap">
+    <div className="parent-wrap flex flex-col gap-10">
       <div>
         <h3 className="sectionheader text-pjgreen">Our Departments</h3>
         <p className='text-greytext'>
@@ -11,11 +11,12 @@ const OurDeps = () => {
           exceptional service and expertise
         </p>
       </div>
-      <div className='grid grid-cols-3'>
+      <div className='flex justify-between'>
         <DepsCard />
         <DepsCard />
         <DepsCard />
       </div>
+      
     </div>
   );
 }

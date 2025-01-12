@@ -3,8 +3,8 @@ import cardImg from "../../../public/static/image/cardimg1.png"
 import Image from 'next/image';
 const DepsCard = () => {
   return (
-    <div className='w-[25rem]'>
-      <div className='w-full h-[18rem] overflow-hidden rounded-t-xl' >
+    <div className='w-[28rem]'>
+      <div className='w-full h-[21rem] overflow-hidden rounded-t-xl' >
         <Image src={cardImg} alt='cardimg1' style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}} />
       </div>
       <div className='px-[3rem] bg-white shadow-lg flex flex-col gap-2 py-10 pb-16  rounded-b-xl'>

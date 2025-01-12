@@ -34,7 +34,7 @@ const Nav = () => {
   ];
   const pathname = usePathname();
   return (
-    <div className=" left-0 top-0 right-0 fixed z-10">
+    <div className=" left-0 top-0 right-0 fixed z-[99]">
       <div className="h-[4rem] bg-darktop flex items-center justify-center px-[4rem]">
         <div className="flex w-full gap-5 justify-end">
           <aside className="text-white bg-[#303030] px-2 rounded-md flex gap-2">
