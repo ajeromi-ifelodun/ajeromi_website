@@ -37,13 +37,13 @@ const Nav = () => {
     <div className=" left-0 top-0 right-0 fixed z-[99]">
       <div className="h-[4rem] bg-darktop flex items-center justify-center px-[4rem]">
         <div className="flex w-full gap-5 justify-end">
-          <aside className="text-white bg-[#303030] px-2 rounded-md flex gap-2">
+          <aside className="text-white bg-[#303030] px-2 rounded-md flex gap-2 items-center">
             <Phoneicon />
-            <p className="">+2345656565656</p>
+            <p className="text-[1rem]">+2345656565656</p>
           </aside>
-          <aside className="text-white bg-[#303030] px-2 rounded-md flex gap-2">
+          <aside className="text-white bg-[#303030] px-2 rounded-md flex gap-2 items-center ">
             <Mailicon />
-            <p className="">admin@example.com</p>
+            <p className="text-[1rem]">admin@example.com</p>
           </aside>
         </div>
       </div>

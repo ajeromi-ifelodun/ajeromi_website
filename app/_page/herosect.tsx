@@ -4,7 +4,7 @@ import heroimg from "../../public/static/image/heroimg.png"
 import { Buttonarrow } from '../_shared/icons/icons';
 const Herosect = () => {
   return (
-    <div className="w-full h-screen relative ">
+    <div className="w-full h-screen relative  mt-20">
       <Image src={heroimg} alt="heroimg" style={{ objectFit: "cover",width:"100%",height:"100%" }} />
       <div className="bg-gradient-to-r from-[#005222] to-[#00B84B33] inset-0 absolute h-full" />
       <div className="absolute inset-0 h-full w-full z-40 flex text-white flex-col justify-center px-[4rem] gap-5">
