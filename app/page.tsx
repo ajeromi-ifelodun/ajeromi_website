@@ -3,6 +3,8 @@ import Herosect from "./_page/herosect";
 import OurDeps from "./_page/ourDeps";
 import Ourexects from "./_page/ourexect";
 import Ourvids from "./_page/ourvids";
+import Latest from "./_page/latest";
+import MapLocation from "./_page/map";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <OurDeps />
       <Ourexects />
       <Ourvids />
+      <Latest />
+      <MapLocation />
     </div>
   );
 }
