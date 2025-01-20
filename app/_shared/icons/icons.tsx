@@ -13,8 +13,12 @@ import Instadark from "../../../public/static/svg/instadark.svg";
 import Twitterdark from "../../../public/static/svg/twitterdark.svg";
 import Linkedindark from "../../../public/static/svg/linkedindark.svg";
 import Youtubedark from "../../../public/static/svg/youtubedark.svg";
+import Dropdownicon from  "../../../public/static/svg/dropdown.svg"
+import Menubar  from "../../../public/static/svg/menubar.svg"
+import Searchicon from "../../../public/static/svg/searchicon.svg"
 
-export { Mailicon, Phoneicon, Logo, Buttonarrow, Rightarrow, FooterLogo };
+// export 
+export { Mailicon, Phoneicon, Logo, Buttonarrow, Rightarrow, FooterLogo,Dropdownicon,Menubar,Searchicon };
 
 // social icons
 export {

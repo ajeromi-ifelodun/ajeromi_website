@@ -3,11 +3,11 @@ import cardImg from "../../../public/static/image/cardimg1.png"
 import Image from 'next/image';
 const DepsCard = () => {
   return (
-    <div className='w-[28rem]'>
-      <div className='w-full h-[21rem] overflow-hidden rounded-t-xl' >
+    <div className=' w-[22rem] md:w-[28rem] lg:w-[38rem]'>
+      <div className='w-full h-[17rem] md:h-[21rem] overflow-hidden rounded-t-xl' >
         <Image src={cardImg} alt='cardimg1' style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center"}} />
       </div>
-      <div className='px-[3rem] bg-white shadow-lg flex flex-col gap-2 py-10 pb-16  rounded-b-xl'>
+      <div className='px-[1rem] md:px-[3rem] bg-white shadow-lg flex flex-col gap-2 py-10 pb-16  rounded-b-xl'>
         <p className='text-[1.5rem] text-pjgreen'>Agriculture and Rural Development</p>
         <p >
           Focuses on promoting agricultural productivity, ensuring food

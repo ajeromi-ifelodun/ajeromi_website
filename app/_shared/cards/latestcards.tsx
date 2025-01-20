@@ -3,8 +3,8 @@ import React from 'react'
 import cardImg from "../../../public/static/image/cardimg1.png";
 const Latestcards = () => {
   return (
-    <div className="w-[23rem]">
-      <div className="w-full h-[20rem] overflow-hidden rounded-xl">
+    <div className=" sm:w-[21rem] md:w-[21rem] lg:w-[23rem]">
+      <div className="w-full h-[22rem] overflow-hidden rounded-xl">
         <Image
           src={cardImg}
           alt="cardimg1"

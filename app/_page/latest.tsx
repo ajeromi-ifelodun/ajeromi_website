@@ -12,7 +12,7 @@ const Latest = () => {
           <p className="text-pjgreen text-[1.5rem] ">see all</p> <Rightarrow />
         </aside>
       </div>
-      <div className='flex justify-between mt-10'>
+      <div className="grid grid-cols-1 gap-10 justify-items-center row-span-9 justify-center sm:grid-cols-2 md:grid md:grid-cols-3 lg:flex lg:justify-between mt-10">
         <Latestcards />
         <Latestcards />
         <Latestcards />
