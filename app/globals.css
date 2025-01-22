@@ -7,8 +7,9 @@
   --foreground: #171717;
   --darktop: #272727;
   --lighterdarktoplighterdarktop: #303030;
-  --greytext:#8A8A8A;
-  --pjgreen:#01913C;
+  --greytext: #8a8a8a;
+  --pjlightgreen: #d6ffe7;
+  --pjgreen: #01913c;
 }
 /*
 @media (prefers-color-scheme: dark) {
@@ -17,21 +18,31 @@
     --foreground: #ededed;
   }
 } */
-
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-.parent-wrap{
-  padding:0rem 4rem  ;
-}
-p{
-  font-size: 1.1rem
+
+p {
+  font-size: 1.1rem;
 }
 @layer components {
+  .parent-wrap {
+    @apply px-[0.5rem] md:px-[2rem] lg:px-[4rem] lg:py-[4rem] ;
+  }
   .sectionheader {
-    @apply text-headertext font-extrabold ;
+    @apply text-[2rem] md:text-headertext font-extrabold ;
+  }
+
+  .footerheader {
+    @apply text-[1.8rem] font-bold;
   }
 
   .card {

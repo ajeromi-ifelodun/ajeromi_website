@@ -20,6 +20,7 @@ export default {
         lighterdarktop: "var(--lighterdarktop)",
         greytext: "var(--greytext)",
         pjgreen: "var(--pjgreen)",
+        pjlightgreen: "var(--pjlightgreen)",
       },
     },
   },
