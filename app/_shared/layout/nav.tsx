@@ -89,7 +89,7 @@ const Nav = () => {
       </div>
       {isOver && (
         <div
-          className="absolute top-[7rem] right-[11rem] bg-white  "
+          className="absolute top-[7rem] right-[11rem] bg-white  shadow-xl rounded-b-xl"
           onMouseOver={() => setIsOver(true)}
           onMouseLeave={() => setIsOver(false)}
         >

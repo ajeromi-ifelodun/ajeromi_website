@@ -4,11 +4,12 @@ import React from "react";
 import newsimg from "../../../public/static/image/newsimg.png";
 import image2 from "../../../public/static/image/item2img.png";
 import SearchNews from "./_shared/search";
+import RecentNews from "./_shared/recent";
 const NewsPageClient = () => {
   return (
-    <div className="mt-28 parent-wrap">
-      <div>
-        <h3 className="sectionheader text-pjgreen">
+    <div className="mt-28 parent-wrap flex">
+      <div className="pr-10">
+        <h3 className="text-[2.5rem] font-bold text-pjgreen">
           Empowering the Future: Hon Ayoola to Transform Lives
         </h3>
         <div className="w-[25rem] h-[5px] bg-pjgreen mt-2 " />
@@ -60,7 +61,10 @@ const NewsPageClient = () => {
           shared commitment to improving the community’s infrastructure.
         </p>
       </div>
-      <SearchNews />
+      <div className=" flex flex-col gap-10">
+        <SearchNews />
+        <RecentNews />
+      </div>
     </div>
   );
 };
