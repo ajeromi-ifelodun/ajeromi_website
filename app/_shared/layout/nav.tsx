@@ -20,6 +20,10 @@ const Nav = () => {
       link: "/",
     },
     {
+      name: "About us",
+      link: "/aboutus",
+    },
+    {
       name: "Executive Team",
       link: "/exectives",
     },

@@ -16,9 +16,12 @@ import Youtubedark from "../../../public/static/svg/youtubedark.svg";
 import Dropdownicon from  "../../../public/static/svg/dropdown.svg"
 import Menubar  from "../../../public/static/svg/menubar.svg"
 import Searchicon from "../../../public/static/svg/searchicon.svg"
+import Certificate from "../../../public/static/svg/certification1.svg"
+import Binoculars from "../../../public/static/svg/binoculars1.svg"
+import PlusIcon from "../../../public/static/svg/plusicon.svg"
 
 // export 
-export { Mailicon, Phoneicon, Logo, Buttonarrow, Rightarrow, FooterLogo,Dropdownicon,Menubar,Searchicon };
+export { Mailicon, Phoneicon, Logo, Buttonarrow, Rightarrow, FooterLogo,Dropdownicon,Menubar,Searchicon,Certificate,Binoculars,PlusIcon };
 
 // social icons
 export {

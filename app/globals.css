@@ -40,6 +40,9 @@ p {
   .sectionheader {
     @apply text-[2rem] md:text-headertext font-extrabold ;
   }
+  .sectionminiheader {
+    @apply text-[2rem] md:text-[2.5rem] font-extrabold ;
+  }
 
   .footerheader {
     @apply text-[1.8rem] font-bold;
