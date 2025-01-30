@@ -11,8 +11,8 @@ import ContactForm from "../_shared/contactform";
 
 const Formsect = () => {
   return (
-    <div className="mt-28 h-[100vh] w-full bg-pjlightgreen flex px-[4rem]">
-      <div className="flex flex-col  justify-center w-1/2 gap-10">
+    <div className="mt-28  w-full bg-pjlightgreen flex flex-col px-[4rem] md:flex-row  ">
+      <div className="flex flex-col  justify-center w-full md:w-1/2 gap-10 py-[4rem]">
         <div>
           <h3 className="sectionheader">Contact Us</h3>
           <p className="pr-14">
@@ -43,7 +43,7 @@ const Formsect = () => {
           </aside>
         </div>
       </div>
-      <div className="flex items-center justify-center w-1/2">
+      <div className="flex items-center justify-center w-full md:w-1/2 py-[4rem]">
         <ContactForm />
       </div>
     </div>

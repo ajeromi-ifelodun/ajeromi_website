@@ -3,8 +3,8 @@ import charmanimg from "../../../public/static/image/chairmanimg.png"
 import Image from "next/image";
 const Chairmancard = () => {
   return (
-    <div className="h-full w-full bg-gradient-to-r from-[#D1EBDC] to-white rounded-xl flex justify-between px-[4rem] items-center py-[4rem] shadow-xl">
-      <div className="w-1/2">
+    <div className="h-full w-full bg-gradient-to-r from-[#D1EBDC] to-white rounded-xl flex-col md: lg:flex lg:flex-row justify-between px-[0.5rem] md:px-[2rem] lg:px-[4rem] items-center py-[4rem] shadow-xl">
+      <div className=" w-full lg:w-1/2">
         <h3 className=" text-pjgreen text-[2.5rem] font-extrabold">
           Meet Our Executive Chairman
         </h3>
@@ -28,7 +28,16 @@ const Chairmancard = () => {
         </p>
       </div>
       <div className="w-[28rem] h-[25rem] overflow-hidden rounded-xl">
-        <Image src={charmanimg} alt="chairman" style={{width:"100%",height:"100%", objectFit:"cover",objectPosition:"center" }} />
+        <Image
+          src={charmanimg}
+          alt="chairman"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center center",
+          }}
+        />
       </div>
     </div>
   );
