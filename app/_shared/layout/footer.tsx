@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Facebook, FooterLogo, Insta, Twitter } from "../icons/icons";
 import Link from "next/link";
 
@@ -24,9 +24,15 @@ const Footer = () => {
           <div>
             <h3 className="footerheader mt-5">Follow Us</h3>
             <aside className="flex gap-5">
-              <Facebook />
-              <Insta />
-              <Twitter />
+              <Link href="https://www.facebook.com/ajeromiifelodunlga" target="_blank" rel="noopener noreferrer">
+                <Facebook />
+              </Link>
+              <Link href="https://www.instagram.com/ajeromi_lga" target="_blank" rel="noopener noreferrer">
+                <Insta />
+              </Link>
+              <Link href="https://www.X.com/AjeromiLga" target="_blank" rel="noopener noreferrer">
+                <Twitter />
+              </Link>
             </aside>
           </div>
         </div>
@@ -34,22 +40,22 @@ const Footer = () => {
           <h3 className="footerheader">Quick Links</h3>
           <ol className="flex flex-col gap-5">
             <li>
-              <Link href={""}>Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href={""}>Executice Team</Link>
+              <Link href="/executive-team">Executive Team</Link>
             </li>
             <li>
-              <Link href={""}>Our Departments</Link>
+              <Link href="/departments">Our Departments</Link>
             </li>
             <li>
-              <Link href={""}>Our Projects</Link>
+              <Link href="/projects">Our Projects</Link>
             </li>
             <li>
-              <Link href={""}>Latest News</Link>
+              <Link href="/news">Latest News</Link>
             </li>
             <li>
-              <Link href={""}>Contact Us</Link>
+              <Link href="/contact">Contact Us</Link>
             </li>
           </ol>
         </div>
@@ -58,7 +64,7 @@ const Footer = () => {
         <div className="flex w-full gap-5 justify-center items-center">
           <p className="text-white text-[0.8rem]">
             ©2025 All Right Reserved for THE OFFICIAL WEBSITE OF
-            AHEROMI-IFELODUN LOCAL GOVERNMENT
+            AJEROMI-IFELODUN LOCAL GOVERNMENT
           </p>
         </div>
       </div>
