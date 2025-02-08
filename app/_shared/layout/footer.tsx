@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="bg-[#005222] text-white pt-[4rem] pb-[2rem] px-[4rem] flex justify-between">
-        <div className="w-1/3">
+    <div className="">
+      <div className="bg-[#005222] text-white pt-[4rem] pb-[2rem] px-[4rem] flex flex-col justify-between md:flex-row md:gap-10">
+        <div className="w-full  md:w-1/3">
           <FooterLogo />
           <p className="mt-10">
             Ajeromi-Ifelodun Local Government Area (LGA) is one of the most
@@ -16,12 +16,12 @@ const Footer = () => {
             heritage, bustling economic activities, and diverse population.
           </p>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 mt-10 md:mt-10">
           <h3 className="footerheader">Contact Info</h3>
           <p>+234 812 3456 789</p>
           <p>info@ajeromi-ifelodun.lg.gov.ng</p>
           <p>1, Baale Adeyemo Street, Ajegunle 110001,Lagos, Nigeria</p>
-          <div>
+          <div className="flex flex-col gap-3">
             <h3 className="footerheader mt-5">Follow Us</h3>
             <aside className="flex gap-5">
               <Facebook />
@@ -30,7 +30,7 @@ const Footer = () => {
             </aside>
           </div>
         </div>
-        <div className=" flex flex-col gap-5">
+        <div className=" flex flex-col gap-5 mt-10 md:mt-10">
           <h3 className="footerheader">Quick Links</h3>
           <ol className="flex flex-col gap-5">
             <li>

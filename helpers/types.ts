@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 
 export interface ContactFormValues {
   firstname: string;
@@ -5,4 +6,10 @@ export interface ContactFormValues {
   email: string;
   phonenumber: string;
   help: string;
+}
+
+export interface Department {
+  icon: ReactNode
+  title: string;
+  content: string;
 }
