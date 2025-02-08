@@ -19,9 +19,24 @@ import Searchicon from "../../../public/static/svg/searchicon.svg"
 import Certificate from "../../../public/static/svg/certification1.svg"
 import Binoculars from "../../../public/static/svg/binoculars1.svg"
 import PlusIcon from "../../../public/static/svg/plusicon.svg"
-
+import ArrowLeft from "../../../public/static/arrows/arrow-left.svg";
+import ArrowRight from "../../../public/static/arrows/arrow-rightt.svg";
+import Agriculture from "../../../public/static/svg/depsicons/agriculture.svg"
+import Buget from "../../../public/static/svg/depsicons/budget2.svg"
+import Ict from "../../../public/static/svg/depsicons/ict.svg";
+import Legal from "../../../public/static/svg/depsicons/legal.svg";
+import Procurment from "../../../public/static/svg/depsicons/procurement.svg";
+import Marriage from "../../../public/static/svg/depsicons/marriage.svg";
+import Hr from "../../../public/static/svg/depsicons/hr-manager.svg";
+import Health from "../../../public/static/svg/depsicons/health.svg";
+import Education from "../../../public/static/svg/depsicons/education.svg";
+import Finance from "../../../public/static/svg/depsicons/finance.svg";
+import Audit from "../../../public/static/svg/depsicons/audit.svg";
+import Media from "../../../public/static/svg/depsicons/media.svg";
+import Enviromental from "../../../public/static/svg/depsicons/enviromental.svg";
+import Tourism from "../../../public/static/svg/depsicons/tourisim.svg";
 // export 
-export { Mailicon, Phoneicon, Logo, Buttonarrow, Rightarrow, FooterLogo,Dropdownicon,Menubar,Searchicon,Certificate,Binoculars,PlusIcon };
+export { Mailicon, Phoneicon, Logo, Buttonarrow, Rightarrow, FooterLogo,Dropdownicon,Menubar,Searchicon,Certificate,Binoculars,PlusIcon ,ArrowLeft,ArrowRight};
 
 // social icons
 export {
@@ -34,3 +49,8 @@ export {
   Linkedindark,
   Youtubedark,
 };
+
+export {
+ Agriculture,Buget,Ict,
+  Legal,Procurment,Marriage,Hr,Health,Education,Finance,Audit,Media,Enviromental,Tourism
+}
