@@ -5,16 +5,21 @@ import Ourexects from "./_page/ourexect";
 import Ourvids from "./_page/ourvids";
 import Latest from "./_page/latest";
 import MapLocation from "./_page/map";
+import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 
 export default function Home() {
+   const queryClient = new QueryClient();
   return (
-    <div className="">
-      <Herosect />
-      <OurDeps />
-      <Ourexects />
-      <Ourvids />
-      <Latest />
-      <MapLocation />
-    </div>
+    
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      <div className="">
+        <Herosect />
+        <OurDeps />
+        <Ourexects />
+        <Ourvids />
+        <Latest />
+        <MapLocation />
+      </div>
+    </HydrationBoundary>
   );
 }

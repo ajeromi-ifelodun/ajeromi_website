@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import * as Yup from "yup";
 import dotenv from "dotenv"
+import { NextResponse } from "next/server";
 dotenv.config();
 
 
@@ -26,8 +27,8 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.NEXT_PUBLIC_EMAIL_USER,
-        pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
@@ -47,9 +48,11 @@ export async function POST(req) {
     // Send email
     await transporter.sendMail(mailOptions);
 
-    return Response.json({ message: "Email sent successfully!" }, { status: 200 });
+    return NextResponse.json({ message: "Email sent successfully!",status:200 });
   } catch (error) {
     console.error("Error sending email:", error);
-    return Response.json({ message: error.message }, { status: 400 });
+    return NextResponse.json(
+      { message: error.message, status: 400 },
+    );
   }
 }

@@ -25,7 +25,7 @@ export async function GET(req) {
       url: image.secure_url,
     }));
 
-    return NextResponse.json({ images }, { status: 200 });
+    return NextResponse.json({ images },{ status: 200 });
   } catch (error) {
     console.error("Cloudinary Fetch Error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
