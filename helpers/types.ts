@@ -13,3 +13,9 @@ export interface Department {
   title: string;
   content: string;
 }
+
+export type ReqResponseType = {
+  success: boolean;
+  data?: any;
+  message: string;
+};

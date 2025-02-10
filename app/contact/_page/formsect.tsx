@@ -28,7 +28,7 @@ const Formsect = () => {
             <Link href={""}>
               <Facebookdark />
             </Link>
-            <Link href={""}>
+            <Link href={"instagram.com/ajeromi_lga"}>
               <Instadark />
             </Link>
             <Link href={""}>
