@@ -1,6 +1,8 @@
+import PageClient from "./pageClient";
+
 export default function Executives(){
 
   return (
-    <div>Exectives</div>
+    <PageClient />
   )
 };

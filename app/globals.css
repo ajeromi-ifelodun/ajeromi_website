@@ -52,3 +52,31 @@ p {
     @apply bg-gray-100 shadow-md p-4 rounded-lg;
   }
 }
+
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Moves pagination outside */
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  margin: 0 5px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--pjgreen);
+  opacity: 1;
+}
+
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--pjgreen)
+}

@@ -25,7 +25,7 @@ const Nav = () => {
     },
     {
       name: "Executive Team",
-      link: "/exectives",
+      link: "/executives",
     },
     {
       name: "Departments",
