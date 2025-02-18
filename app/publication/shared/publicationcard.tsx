@@ -18,7 +18,7 @@ const Publicationcard = ({image,title}:{image:string,title:string}) => {
         <p className="text-pjgreen text-[1.2rem] break-words text-wrap break-all">{title}</p>
         <aside className=" flex gap-3 ">
           <a
-            href={`${image.replace(
+            href={`${image?.replace(
               "/upload/",
               "/upload/fl_attachment:download/"
             )}`}

@@ -17,7 +17,7 @@ const WomenEmpowerment = ({
   title: string;
 }) => {
   return (
-    <div className="pr-10 flex-shrink-0 w-[52rem]">
+    <div className="w-full pr-0 lg:pr-10 flex-shrink-0 lg:w-[52rem]">
       <div className="">
         <div className="w-full">
           <Swiper

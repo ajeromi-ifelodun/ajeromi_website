@@ -43,14 +43,15 @@ export async function GET(req) {
             );
         }
 
+
         const images = resources.map((image) => ({
-            id: image.asset_id,
-            optimized_url: cloudinary.url(image.public_id, {
-                transformation: [
-                    { quality: "good" },  // Auto quality adjustment
-                    { fetch_format: "auto" }  // Optimized format (WebP, AVIF, etc.)
-                ]
-            })
+          id: image.asset_id,
+          optimized_url: cloudinary.url(image.secure_url, {
+            transformation: [
+              { quality: "good" }, // Auto quality adjustment
+              { fetch_format: "auto" }, // Optimized format (WebP, AVIF, etc.)
+            ],
+          }),
         }));
 
         //console.timeEnd("API Execution Time"); 

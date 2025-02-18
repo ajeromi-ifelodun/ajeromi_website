@@ -11,12 +11,12 @@ const Cencus = () => {
         <div className="w-1/2 flex flex-col gap-5">
           <h3 className="sectionminiheader text-pjgreen"> Census</h3>
           <p className="text-[1.2rem] pr-0 lg:pr-10">
-            In 1991, Lagos State's provisional census recorded 5,685,781 people.
-            Among the 20 local governments in Lagos State, Ojo Local Government
-            (including Amuwo Odofin and Ajeromi/ Ifelodun) had the highest
-            population of 1,011,808. Today, Ajeromi-Ifelodun has distributed
-            over four million National Identity Cards, reflecting a much larger
-            population than recorded.
+            In 1991, Lagos State&apos;s provisional census recorded 5,685,781
+            people. Among the 20 local governments in Lagos State, Ojo Local
+            Government (including Amuwo Odofin and Ajeromi/ Ifelodun) had the
+            highest population of 1,011,808. Today, Ajeromi-Ifelodun has
+            distributed over four million National Identity Cards, reflecting a
+            much larger population than recorded.
           </p>
         </div>
         <div className="w-1/2">

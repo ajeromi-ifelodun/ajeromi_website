@@ -10,7 +10,8 @@ import "swiper/css";
 
 import { Pagination } from "swiper/modules";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-const First = ({ images,title,paragraphs}:{images:StaticImport [],title:string,paragraphs:string []}) => {
+const First = ({ images,title,paragraphs}:{images: string [],title:string,paragraphs:string []}) => {
+  console.log(images)
   return (
     <div className="pr-10 flex-shrink-0 w-[52rem]">
       <div className="">
@@ -21,11 +22,11 @@ const First = ({ images,title,paragraphs}:{images:StaticImport [],title:string,p
             pagination={{ el: ".custom-pagination", clickable: true }}
             className="mySwiper"
           >
-            {images.map((img,index) => (
+            {images?.map((img,index) => (
               <SwiperSlide key={index}>
                 <div className="w-full h-[32rem] bg-gray-200 flex items-center justify-center">
-                  <Image
-                    src={img}
+                  <img
+                    src={ img}
                     alt="picture"
                     className="w-full h-full object-cover object-center"
                   />

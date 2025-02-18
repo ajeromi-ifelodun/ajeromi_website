@@ -19,7 +19,6 @@ const Newspanel = () => {
       </div>
 
       <div className="flex flex-col gap-5 justify-center">
-        <p className="text-greytext">Nov 29, 2024</p>
         <p className="font-bold text-[1.2rem]">Empowering the Future: Hon Ayoola to Transform Lives</p>
         <p>
           Hon. Fatai Adekunle Ayoola is the Executive Chairman of

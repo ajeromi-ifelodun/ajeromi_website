@@ -5,7 +5,8 @@ import newsimg from "../../../public/static/image/newsimg.png";
 import image2 from "../../../public/static/image/item2img.png";
 import SearchNews from "./_shared/search";
 import RecentNews from "./_shared/recent";
-
+import womenempower1 from '../../../public/static/image/empowering1.jpg'
+import womenempower2 from '../../../public/static/image/empowering2.jpg'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -13,18 +14,25 @@ import { Pagination } from "swiper/modules";
 import First from "./_tabs/first";
 import { useParams } from "next/navigation";
 import YouthEmpowerment from "./_tabs/youthempower";
-import Lightup from "./_tabs/lightup";
+import Lightup, { FetchedImages } from "./_tabs/lightup";
 import WomenEmpowerment from "./_tabs/womenempowerment";
+import { getRequest } from "../../queries/requests";
+import { useQuery } from "@tanstack/react-query";
 
 const NewsPageClient = () => {
   const { id } = useParams();
-
+  const { data, isFetching, isLoading, isError, isSuccess } = useQuery({
+    queryKey: ["get_publications"],
+    queryFn: () => getRequest("/news?article_id=govreview2025"),
+  });
+  const fetchedimages: FetchedImages[] = data?.data?.images || [];
+  const imageurls = fetchedimages.map((image) => image.optimized_url);
   const TabContent = useMemo(() => {
     switch (id) {
       case "1":
         return (
           <First
-          images={[newsimg,image2]}
+            images={[newsimg.src, image2.src]}
             title="Empowering the Future: Hon Ayoola to Transform Lives"
             paragraphs={[
               "The race to transform Ajeromi Ifelodun through the rehabilitation and construction of 21 key roads is in full swing, and Hon. Fatai Adekunle Ayoola is setting an inspiring pace. Among the roads undergoing this transformative project, Tolu Road has become the latest focus of attention, with significant progress being made under the Council Chairman’s watchful eye.",
@@ -36,7 +44,7 @@ const NewsPageClient = () => {
       case "2":
         return (
           <First
-            images={[newsimg, image2]}
+            images={[...imageurls]}
             title="Ajeromi-Ifelodun Local Government Hosts 2025 Budget Retreat"
             paragraphs={[
               "The Ajeromi-Ifelodun Local Government successfully held its 2025 Budget Retreat from Thursday, November 28, to Sunday, December 1, 2024, at Dover Hotel, Allen Avenue, Ikeja, Lagos.",
@@ -64,7 +72,7 @@ const NewsPageClient = () => {
       case "5":
         return (
           <WomenEmpowerment
-            images={[newsimg, image2]}
+            images={[womenempower1, womenempower2]}
             title="Empowering Women, Transforming Communities: Ajeromi-Ifelodun Women Summit & Mega Empowerment Program 2024"
           />
         );
@@ -72,9 +80,9 @@ const NewsPageClient = () => {
       default:
         return <div>No news available</div>;
     }
-  }, [id]);
+  }, [id,data]);
   return (
-    <div className="mt-28 parent-wrap flex flex-wrap justify-between">
+    <div className="mt-28 parent-wrap block lg:flex flex-wrap justify-between">
       {TabContent}
 
       {/* Right Section - Search and Recent News */}
@@ -87,4 +95,3 @@ const NewsPageClient = () => {
 };
 
 export default NewsPageClient;
-
