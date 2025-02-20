@@ -4,17 +4,11 @@ services:
     image: ajeromi-ifelodun/ajeromi_website:latest  
     build: .
     env_file:
-      - .env
-    restart: always
+      - .env  
     ports:
       - "3000:3000"
+    restart: always
     environment:
-      - NODE_ENV=production
-      - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
-      - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
-      - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
-      - EMAIL_USER=${EMAIL_USER}
-      - EMAIL_PASS=${EMAIL_PASS}
+      - NODE_ENV=production  
     volumes:
-      - .:/app  
-      - /app/node_modules 
+      - /app/node_modules  
