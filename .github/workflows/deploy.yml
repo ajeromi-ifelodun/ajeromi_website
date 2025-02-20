@@ -20,20 +20,33 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            export CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
-            export CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
-            export CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}
-            export EMAIL_USER = ${{secrets.EMAIL_USER}}
-            export EMAIL_PASS = ${{secrets.EMAIL_PASS}}
             cd /home/${{ secrets.SSH_USER }}
+
+            # Clone the repo if it doesn't exist
             if [ ! -d "ajeromi_webapp/.git" ]; then
               git clone https://github.com/ajeromi-ifelodun/ajeromi_website.git ajeromi_webapp
             fi
+
             cd ajeromi_webapp
-            git reset --hard origin/main  # Reset to the latest commit
-            git pull origin main  # Pull latest changes
-            
-            docker-compose down || true  # Stop running containers
-            docker-compose build --no-cache  # Build fresh image
-            docker-compose up -d  # Start in detached mode
-            docker system prune -af  # Clean up old Docker images
+            git reset --hard origin/main
+            git pull origin main
+
+            # 🛠️ CREATE .env FILE (Overwrite if exists)
+            cat > .env <<EOF
+            CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
+            CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
+            CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}
+            EMAIL_USER=${{ secrets.EMAIL_USER }}
+            EMAIL_PASS=${{ secrets.EMAIL_PASS }}
+            NODE_ENV=production
+            EOF
+
+            # Stop running containers (if any)
+            docker-compose down || true  
+
+            # Build fresh image and start containers
+            docker-compose build --no-cache  
+            docker-compose up -d  
+
+            # Clean up old images to save space
+            docker system prune -af  
