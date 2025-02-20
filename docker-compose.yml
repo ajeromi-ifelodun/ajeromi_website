@@ -1,15 +1,20 @@
 services:
   nextjs-app:
-    image: ajeromi-ifelodun/ajeromi_website:latest
-    env_file:
-      - .env  
-    build: .
     container_name: ajeromi_container
+    image: ajeromi-ifelodun/ajeromi_website:latest  
+    build: .
+    env_file:
+      - .env
     restart: always
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+      - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+      - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+      - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
     volumes:
       - .:/app  
       - /app/node_modules 
