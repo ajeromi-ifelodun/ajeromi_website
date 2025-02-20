@@ -29,6 +29,8 @@ export const postRequest = async (data: any, url: string) => {
     console.log(response)
     if (response.data?.status) {
       return SuccessResponse(response?.data?.data, response?.data?.message);
+    } else if (response.status == 200) {
+      return SuccessResponse(response?.data, response?.data?.message);
     } else {
       return FailedResponse(
         response?.data?.message || "Some error occured",
