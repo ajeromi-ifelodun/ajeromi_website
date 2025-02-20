@@ -1,8 +1,17 @@
 import nodemailer from "nodemailer";
 import * as Yup from "yup";
-import dotenv from "dotenv"
 import { NextResponse } from "next/server";
-dotenv.config();
+
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
+}
 
 
 const contactSchema = Yup.object().shape({
