@@ -19,3 +19,9 @@ export type ReqResponseType = {
   data?: any;
   message: string;
 };
+
+export interface NewsArticle {
+  title: string;
+  description: string;
+  url: string;
+}
