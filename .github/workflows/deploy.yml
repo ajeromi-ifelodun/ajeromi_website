@@ -33,11 +33,11 @@ jobs:
             git pull origin main
 
             # 🛠️ CREATE .env FILE (Overwrite if exists)
-            echo "CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" > .env
-            echo "CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}" >> .env
-            echo "CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> .env
-            echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" >> .env
-            echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> .env
+            echo "NEXT_PUBLIC_CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" > .env
+            echo "NEXT_PUBLIC_CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}" >> .env
+            echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> .env
+            echo "NEXT_PUBLIC_EMAIL_USER=${{ secrets.EMAIL_USER }}" >> .env
+            echo "NEXT_PUBLIC_EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> .env
             echo "NODE_ENV=production" >> .env
 
             # 🛑 Stop and remove old containers (if any)
