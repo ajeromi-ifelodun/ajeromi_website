@@ -1,23 +1,14 @@
-
-# services:
-#   nextjs-app:
-#     image: ajeromi-ifelodun/ajeromi_website:latest
-#     container_name: ajeromi_container
-#     restart: always
-#     ports:
-#       - "3000:3000"
-
-
 services:
   nextjs-app:
+    container_name: ajeromi_container
     image: ajeromi-ifelodun/ajeromi_website:latest  
     build: .
-    container_name: ajeromi_container
-    restart: always
+    env_file:
+      - .env  
     ports:
       - "3000:3000"
+    restart: always
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=production  
     volumes:
-      - .:/app  
-      - /app/node_modules 
+      - /app/node_modules  

@@ -3,7 +3,7 @@ name: Deploy Next.js App
 on:
   push:
     branches:
-      - main  # Change this if deploying from a different branch
+      - main
 
 jobs:
   deploy:
@@ -16,13 +16,39 @@ jobs:
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/${{ secrets.VPS_USER }}/ajeromi_website  # Adjust the path to your project on the VPS
-            git pull origin main  # Pull latest changes
-            docker compose down  # Stop running containers
-            docker compose build --no-cache  # Build new image
-            docker compose up -d  # Start in detached mode
-            docker system prune -af  # Optional: Clean up unused Docker images
+            cd /home/${{ secrets.SSH_USER }}
+
+            # Clone the repo if it doesn't exist
+            if [ ! -d "ajeromi_webapp/.git" ]; then
+              git clone https://github.com/ajeromi-ifelodun/ajeromi_website.git ajeromi_webapp
+            fi
+
+            cd ajeromi_webapp
+            git fetch --all
+            git checkout main
+            git pull origin main
+
+            # 🛠️ CREATE .env FILE (Overwrite if exists)
+            echo "CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" > .env
+            echo "CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}" >> .env
+            echo "CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> .env
+            echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" >> .env
+            echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> .env
+            echo "NODE_ENV=production" >> .env
+
+            # 🛑 Stop and remove old containers (if any)
+            docker-compose down --remove-orphans
+
+            # 🏗️ Build fresh image and restart container
+            docker-compose build --no-cache  
+            docker-compose up -d  
+
+            # ✅ Check running containers
+            docker ps
+
+            # 🧹 Clean up old images to free space
+            docker system prune -af  
