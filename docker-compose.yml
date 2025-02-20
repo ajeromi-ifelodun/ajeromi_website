@@ -1,6 +1,8 @@
 services:
   nextjs-app:
-    image: ajeromi-ifelodun/ajeromi_website:latest  
+    image: ajeromi-ifelodun/ajeromi_website:latest
+    env_file:
+      - .env  
     build: .
     container_name: ajeromi_container
     restart: always
