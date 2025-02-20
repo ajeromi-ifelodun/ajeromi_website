@@ -13,3 +13,15 @@ export interface Department {
   title: string;
   content: string;
 }
+
+export type ReqResponseType = {
+  success: boolean;
+  data?: any;
+  message: string;
+};
+
+export interface NewsArticle {
+  title: string;
+  description: string;
+  url: string;
+}

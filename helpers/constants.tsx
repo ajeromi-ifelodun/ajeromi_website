@@ -87,3 +87,46 @@ export const departments :Department[] = [
       "Promotes cultural heritage, supports tourism initiatives, and fosters artistic expression to enhance local and international engagement.",
   }
 ];
+
+
+const newsItems = [
+  {
+    title:"sdvkjsdnkn",
+    paragrph:"sdnlsn",
+    image:"cover"
+  }
+]
+
+export const Videos = [
+  {
+    title: "THE MARACANA FOOTBALL PITCH IN AJEGUNLE",
+    video: "https://www.youtube.com/embed/xwzFEp3jvlc?si=lbh-E0ud1W_iGRZm",
+  },
+  {
+    title: "How Hon Ayoola Fatai is improving security in Ajegunle",
+    video: "https://www.youtube.com/embed/L3Rc48TD21g?si=_svAviQHAwCN3iNM",
+  },
+  {
+    title: "Hon Ayoola Fatai milestone on Infrastructural Development",
+    video: "https://www.youtube.com/embed/5L_3Ymz0D0I?si=mqx26Lw0JgsaJyQA",
+  },
+  {
+    title: "Hon. Ayoola Hosts Super Eagles Star Wilfred Ndidi",
+    video: "https://www.youtube.com/embed/PeiV3N3UGz8?si=4xv9FLRjZgPvAUeU",
+  },
+  {
+    title:
+      "WIZKID’S FATHER SUPPORTS AJEROMI IFELODUN CHAIRMAN, HON. FATAI AYOOLA AT HIS MEGA EMPOWERMENT EVENT",
+    video: "https://www.youtube.com/embed/c9wRdlDHRnU?si=HoEffcbtuz16V7ch",
+  },
+  {
+    title:
+      "AJEROMI-IFELODUN CHAIRMAN, HON. FATAI AYOOLA HOLDS MEGA EMPOWERMENT ACTIVITY AT HIS BASE",
+    video: "https://www.youtube.com/embed/FpS4W9XChGY?si=7Ywu10k_RdGFMMvk",
+  },
+  {
+    title:
+      "RAMADAN: HON. AYOOLA FATAI ADEKUNLE DISBURSES PALLIATIVES TO MUSLIMS IN AJEROMI-IFELODUN LGA",
+    video: "https://www.youtube.com/embed/6alhbYKILoM?si=VCwcnKY75XWG7Cag",
+  },
+];

@@ -5,6 +5,10 @@ import * as Yup from "yup";
 import { ContactFormValues } from "../../../helpers/types";
 import { FlatInput, FlatTextarea } from "../../_shared/input_comps/inputFeilds";
 import { SolidPrimaryButton } from "../../_shared/input_comps/buttons";
+import { postRequest } from "../../queries/requests";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "react-toastify";
+import axios from "axios";
 const ContactForm = () => {
   const initialValues: ContactFormValues = {
     firstname: "",
@@ -34,13 +38,44 @@ const ContactForm = () => {
       .required("Please describe how we can help you")
       .max(500, "Help description cannot exceed 500 characters"),
   });
+ 
+
   const formik = useFormik({
     initialValues,
     validationSchema,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      // getinfo(values)
+      submitContact(values);
     },
   });
+   
+  const { mutate: submitContact, isPending  ,isSuccess} = useMutation({
+    mutationKey: ["submit_contact"],
+    mutationFn: (data: ContactFormValues) => postRequest(data, `contact`),
+    onSuccess: (data) => {
+      if (data?.success) {
+        console.log(data);
+        toast(data?.message, {
+          toastId: `toast`,
+          type: "success",
+        });
+        formik.resetForm( )
+        return;
+      }
+      toast(data?.message, {
+        toastId: `toast`,
+        type: "error",
+      });
+    },
+    onError(error, variables, context) {
+      toast("Failed to submit", {
+        toastId: `toast`,
+        type: "error",
+      });
+    },
+  });
+  console.log(isSuccess)
+  console.log(isPending)
   return (
     <div className=" bg-white rounded-xl py-[3rem] px-[2rem] shadow-2xl">
       <h3 className="text-[2.5rem] font-bold">Get in Touch</h3>
@@ -51,7 +86,7 @@ const ContactForm = () => {
             label="Firstname"
             name="firstname"
             value={formik.values.firstname}
-            onChange={formik.handleChange}
+            onChange ={formik.handleChange}
             onBlur={formik.handleBlur}
             error={Boolean(formik.touched.firstname && formik.errors.firstname)}
           />
@@ -90,7 +125,7 @@ const ContactForm = () => {
           onBlur={formik.handleBlur}
           error={Boolean(formik.touched.help && formik.errors.help)}
         />
-        <SolidPrimaryButton type="submit" fullWidth isLoading={false}>
+        <SolidPrimaryButton type="submit" fullWidth isLoading={isPending}>
           Submit
         </SolidPrimaryButton>
       </form>

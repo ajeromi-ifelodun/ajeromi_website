@@ -2,13 +2,15 @@ import Image from 'next/image';
 import React from 'react'
 import cardImg from "../../../public/static/image/cardimg1.png";
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-const Latestcards = ({img,paragraph,title ,date}:{img:StaticImport,title:string,paragraph:string,date:string}) => {
+const Latestcards = ({img,paragraph,title ,date}:{img:string,title:string,paragraph:string,date:string}) => {
   return (
     <div className=" sm:w-[21rem] md:w-[21rem] lg:w-[23rem]">
       <div className="w-full h-[22rem] overflow-hidden rounded-xl">
         <Image
           src={img}
           alt="cardimg1"
+          width={300}
+          height={300}
           style={{
             width: "100%",
             height: "100%",

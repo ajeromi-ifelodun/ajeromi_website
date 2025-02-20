@@ -25,15 +25,23 @@ const Nav = () => {
     },
     {
       name: "Executive Team",
-      link: "/exectives",
+      link: "/executives",
     },
     {
-      name: "Our Projects",
-      link: "/projects",
+      name: "Departments",
+      link: "/departments",
+    },
+    {
+      name: "Publications",
+      link: "/publication",
     },
     {
       name: "Contact Us",
       link: "/contact",
+    },
+    {
+      name: "Latest News",
+      link: "/newsevents",
     },
   ];
   const pathname = usePathname();
