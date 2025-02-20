@@ -16,7 +16,7 @@ const Latest = () => {
     queryKey: ["get_publications"],
     queryFn: () => getRequest("/newslist"),
   });
-
+  console.log(data)
   const result: NewsArticle[] = data?.data?.images;
 
   return (
