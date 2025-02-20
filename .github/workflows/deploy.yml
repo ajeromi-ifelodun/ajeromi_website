@@ -38,6 +38,7 @@ jobs:
             echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> .env
             echo "NEXT_PUBLIC_EMAIL_USER=${{ secrets.EMAIL_USER }}" >> .env
             echo "NEXT_PUBLIC_EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> .env
+            echo "NEXT_PUBLIC_BASEURL=${{ secrets.NEXT_PUBLIC_BASEURL}}">> .env
             echo "NODE_ENV=production" >> .env
 
             # 🛑 Stop and remove old containers (if any)

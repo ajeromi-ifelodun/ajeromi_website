@@ -34,7 +34,7 @@ const Herosect = () => {
     );
   };
   return (
-    <div className="w-full h-[110vh] relative  mt-28">
+    <div className="w-full h-screen  relative  mt-28">
       <Swiper
         // modules={[Autoplay]}
         loop={true}
@@ -48,10 +48,10 @@ const Herosect = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        className="mySwiper"
+        className="mySwiper h-full"
       >
-        <SwiperSlide>
-          <div>
+        <SwiperSlide className='h-full'>
+          <div className='h-full'>
             <Image
               src={heroimg}
               alt="heroimg"

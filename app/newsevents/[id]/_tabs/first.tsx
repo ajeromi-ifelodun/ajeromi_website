@@ -13,7 +13,7 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 const First = ({ images,title,paragraphs}:{images: string [],title:string,paragraphs:string []}) => {
   console.log(images)
   return (
-    <div className="pr-10 flex-shrink-0 w-[52rem]">
+    <div className="w-full pr-0 lg:pr-10 flex-shrink-0 lg:w-[52rem]">
       <div className="">
         <div className="w-full">
           <Swiper
@@ -22,19 +22,17 @@ const First = ({ images,title,paragraphs}:{images: string [],title:string,paragr
             pagination={{ el: ".custom-pagination", clickable: true }}
             className="mySwiper"
           >
-            {images?.map((img,index) => (
+            {images?.map((img, index) => (
               <SwiperSlide key={index}>
                 <div className="w-full h-[32rem] bg-gray-200 flex items-center justify-center">
                   <img
-                    src={ img}
+                    src={img}
                     alt="picture"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
               </SwiperSlide>
             ))}
-
-            
           </Swiper>
         </div>
         <div className="custom-pagination"></div>

@@ -1,8 +1,7 @@
 import nodemailer from "nodemailer";
 import * as Yup from "yup";
-import dotenv from "dotenv"
 import { NextResponse } from "next/server";
-dotenv.config();
+
 
 
 const contactSchema = Yup.object().shape({

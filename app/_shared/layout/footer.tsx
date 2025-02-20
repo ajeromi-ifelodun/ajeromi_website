@@ -24,13 +24,25 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <h3 className="footerheader mt-5">Follow Us</h3>
             <aside className="flex gap-5">
-              <Link href="https://www.facebook.com/ajeromiifelodunlga" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.facebook.com/ajeromiifelodunlga"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Facebook />
               </Link>
-              <Link href="https://www.instagram.com/ajeromi_lga" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.instagram.com/ajeromi_lga"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Insta />
               </Link>
-              <Link href="https://www.X.com/AjeromiLga" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.X.com/AjeromiLga"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Twitter />
               </Link>
             </aside>
@@ -43,14 +55,14 @@ const Footer = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/executive-team">Executive Team</Link>
+              <Link href="/executives">Executive Team</Link>
             </li>
             <li>
               <Link href="/departments">Our Departments</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/projects">Our Projects</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/news">Latest News</Link>
             </li>

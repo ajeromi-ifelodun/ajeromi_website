@@ -1,5 +1,5 @@
 const reqest = require("supertest");
-const app = require("./api/contact")
+const app = require("./api/contact/route")
 const nodemailer = require("nodemailer");
 const { describe } = require("node:test");
 
