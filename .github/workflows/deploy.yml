@@ -28,30 +28,27 @@ jobs:
             fi
 
             cd ajeromi_webapp
-            git reset --hard origin/main
+            git fetch --all
+            git checkout main
             git pull origin main
 
             # 🛠️ CREATE .env FILE (Overwrite if exists)
-            cat > .env <<EOF
-            CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
-            CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
-            CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}
-            EMAIL_USER=${{ secrets.EMAIL_USER }}
-            EMAIL_PASS=${{ secrets.EMAIL_PASS }}
-            NODE_ENV=production
-            EOF
+            echo "CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" > .env
+            echo "CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}" >> .env
+            echo "CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> .env
+            echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" >> .env
+            echo "EMAIL_PASS=${{ secrets.EMAIL_PASS }}" >> .env
+            echo "NODE_ENV=production" >> .env
 
-            # 🛑 Stop & Remove old ajeromi_container if running
-            docker stop ajeromi_container || true
-            docker rm ajeromi_container || true
+            # 🛑 Stop and remove old containers (if any)
+            docker-compose down --remove-orphans
 
-            # 🔄 Build fresh image and restart container
-            docker-compose down || true  
+            # 🏗️ Build fresh image and restart container
             docker-compose build --no-cache  
             docker-compose up -d  
 
-            # ✅ Check if the container is running with the right name & port
+            # ✅ Check running containers
             docker ps
 
-            # 🧹 Clean up old images to save space
+            # 🧹 Clean up old images to free space
             docker system prune -af  
