@@ -22,7 +22,7 @@ import { useQuery } from "@tanstack/react-query";
 const NewsPageClient = () => {
   const { id } = useParams();
   const { data, isFetching, isLoading, isError, isSuccess } = useQuery({
-    queryKey: ["get_publications"],
+    queryKey: [`get_publications${id}`],
     queryFn: () => getRequest("/news?article_id=govreview2025"),
   });
   const fetchedimages: FetchedImages[] = data?.data?.images || [];

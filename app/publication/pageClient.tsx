@@ -1,9 +1,9 @@
-'use client';
-import { useQuery } from '@tanstack/react-query';
-import React from 'react'
-import { getRequest } from '../queries/requests';
-import Publicationcard from './shared/publicationcard';
-import { Skeleton } from '@nextui-org/react';
+"use client";
+import { useQuery } from "@tanstack/react-query";
+import React from "react";
+import { getRequest } from "../queries/requests";
+import Publicationcard from "./shared/publicationcard";
+import { Skeleton } from "@nextui-org/react";
 export interface Facility {
   id: string;
   name: string;
@@ -15,8 +15,8 @@ const PageClient = () => {
     queryKey: ["get_publications"],
     queryFn: () => getRequest("/gallery"),
   });
-  const images:Facility[] = data?.data?.images;
-  console.log(data?.data?.images)
+  const images: Facility[] = data?.data?.images;
+  console.log(data?.data?.images);
   return (
     <div className="parent-wrap">
       <div className="mt-28 flex flex-col items-center gap-3">
@@ -35,6 +35,6 @@ const PageClient = () => {
       </div>
     </div>
   );
-}
+};
 
-export default PageClient
+export default PageClient;

@@ -22,7 +22,7 @@ const Lightup = ({
   title: string;
 }) => {
   const { data, isFetching, isLoading, isError, isSuccess } = useQuery({
-    queryKey: ["get_publications"],
+    queryKey: ["get_newlightup"],
     queryFn: () => getRequest("/news?article_id=lightup"),
   });
   
