@@ -20,6 +20,11 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            export CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}
+            export CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
+            export CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}
+            export EMAIL_USER = ${{secrets.EMAIL_USER}}
+            export EMAIL_PASS = ${{secrets.EMAIL_PASS}}
             cd /home/${{ secrets.SSH_USER }}
             if [ ! -d "ajeromi_webapp/.git" ]; then
               git clone https://github.com/ajeromi-ifelodun/ajeromi_website.git ajeromi_webapp
@@ -28,7 +33,7 @@ jobs:
             git reset --hard origin/main  # Reset to the latest commit
             git pull origin main  # Pull latest changes
             
-            docker compose down || true  # Stop running containers
-            docker compose build --no-cache  # Build fresh image
-            docker compose up -d  # Start in detached mode
+            docker-compose down || true  # Stop running containers
+            docker-compose build --no-cache  # Build fresh image
+            docker-compose up -d  # Start in detached mode
             docker system prune -af  # Clean up old Docker images
