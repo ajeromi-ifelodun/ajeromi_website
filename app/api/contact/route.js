@@ -10,6 +10,7 @@ const contactSchema = Yup.object().shape({
   help: Yup.string().max(500).required(),
 });
 
+// Allowed origins
 const allowedOrigins = [
   "http://localhost:3000",
   "http://109.176.199.133:3000"
@@ -17,13 +18,12 @@ const allowedOrigins = [
 
 export async function POST(req) {
   try {
-    console.log("API HIT !");
-    const body = await req.json(); // Parse the request body
+    console.log("API HIT!");
+    const body = await req.json(); // Parse request body
 
     // Validate the data
     await contactSchema.validate(body);
 
-    console.log(process.env.EMAIL_PASS);
     // Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -49,63 +49,46 @@ export async function POST(req) {
     // Send email
     await transporter.sendMail(mailOptions);
 
-    // ✅ Get the origin of the request
+    // Get request origin
     const origin = req.headers.get("origin");
-
-    const headers = {
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    };
-
-    if (origin && allowedOrigins.includes(origin)) {
-      headers["Access-Control-Allow-Origin"] = origin;
-    }
 
     return new NextResponse(
       JSON.stringify({ message: "Email sent successfully!", status: 200 }),
       {
         status: 200,
-        headers,
+        headers: {
+          "Access-Control-Allow-Origin": allowedOrigins.includes(origin) ? origin : "",
+          "Access-Control-Allow-Methods": "POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
       }
     );
   } catch (error) {
     console.error("Error sending email:", error);
-
-    const origin = req.headers.get("origin");
-
-    const headers = {
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    };
-
-    if (origin && allowedOrigins.includes(origin)) {
-      headers["Access-Control-Allow-Origin"] = origin;
-    }
-
     return new NextResponse(
       JSON.stringify({ message: error.message, status: 400 }),
       {
         status: 400,
-        headers,
+        headers: {
+          "Access-Control-Allow-Origin": allowedOrigins.includes(req.headers.get("origin")) ? req.headers.get("origin") : "",
+          "Access-Control-Allow-Methods": "POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
       }
     );
   }
 }
 
+// Handle OPTIONS preflight request
 export async function OPTIONS(req) {
   const origin = req.headers.get("origin");
 
-  const headers = {
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization",
-  };
-
-  if (origin && allowedOrigins.includes(origin)) {
-    headers["Access-Control-Allow-Origin"] = origin;
-  }
-
   return new NextResponse(null, {
     status: 204,
-    headers,
+    headers: {
+      "Access-Control-Allow-Origin": allowedOrigins.includes(origin) ? origin : "",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    },
   });
 }
