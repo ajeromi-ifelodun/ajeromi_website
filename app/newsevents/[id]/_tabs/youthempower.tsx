@@ -20,7 +20,7 @@ const YouthEmpowerment = ({
   title: string;
 }) => {
    const { data, isFetching, isLoading, isError, isSuccess } = useQuery({
-     queryKey: ["get_publications"],
+     queryKey: ["get_news_youthempowerment"],
      queryFn: () => getRequest("/news?article_id=AJIF"),
    });
    const fetchedimages: FetchedImages[] = data?.data?.images;

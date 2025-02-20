@@ -8,7 +8,7 @@ import { NewsArticle } from "../../helpers/types";
 
 const PageClient = () => {
   const { data, isFetching, isLoading, isError, isSuccess } = useQuery({
-    queryKey: ["get_publications"],
+    queryKey: ["get_newslist"],
     queryFn: () => getRequest("/newslist"),
   });
    const result: NewsArticle[] = data?.data?.images;
