@@ -15,7 +15,7 @@ const Publicationcard = ({image,title}:{image:string,title:string}) => {
         />
       </div>
       <div className="flex flex-col gap-2 mt-4">
-        <p className="text-pjgreen text-[1.2rem] break-words text-wrap break-all">{title}</p>
+        <p className="text-pjgreen text-[1rem] break-words text-wrap break-all">{title}</p>
         <aside className=" flex gap-3 ">
           <a
             href={`${image?.replace(

@@ -1,7 +1,9 @@
 import React from 'react'
 import CustomImage from '../../_shared/input_comps/img';
 import aboutimg1 from "../../../public/static/image/aboutusimg.png"
-
+import aboutimg from "../../../public/static/image/aboutimg.jpeg"
+import aboutimg4 from "../../../public/static/image/aboutimg4.jpeg"
+import aboutimg3 from "../../../public/static/image/aboutimg3.jpeg"
 const Hrosect = () => {
   return (
     <div className="mt-28 parent-wrap h-screen">
@@ -16,13 +18,13 @@ const Hrosect = () => {
         </div>
         <div className="flex justify-between">
           <div className="w-[32rem] h-[20rem] rounded-xl overflow-hidden">
-            <CustomImage src={aboutimg1} alt="images" />
+            <CustomImage src={aboutimg3} alt="images" />
           </div>
           <div className="w-[32rem] h-[20rem] rounded-xl overflow-hidden">
             <CustomImage src={aboutimg1} alt="images" />
           </div>
           <div className="w-[32rem] h-[20rem] rounded-xl overflow-hidden">
-            <CustomImage src={aboutimg1} alt="images" />
+            <CustomImage src={aboutimg4} alt="images" />
           </div>
         </div>
       </div>

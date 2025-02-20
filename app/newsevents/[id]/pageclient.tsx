@@ -32,18 +32,6 @@ const NewsPageClient = () => {
       case "1":
         return (
           <First
-            images={[newsimg.src, image2.src]}
-            title="Empowering the Future: Hon Ayoola to Transform Lives"
-            paragraphs={[
-              "The race to transform Ajeromi Ifelodun through the rehabilitation and construction of 21 key roads is in full swing, and Hon. Fatai Adekunle Ayoola is setting an inspiring pace. Among the roads undergoing this transformative project, Tolu Road has become the latest focus of attention, with significant progress being made under the Council Chairman’s watchful eye.",
-              "Hon. Fatai Adekunle Ayoola has once again demonstrated his hands-on approach to governance by personally supervising the rehabilitation of Tolu Road. Working tirelessly day and night, the Council Boss has ensured that the project maintains momentum and adheres to the highest standards of quality. His commitment to delivering impactful results continues to resonate strongly with the residents of Ajeromi Ifelodun.",
-              "This remarkable progress on Tolu Road would not have been possible without the partnership between the Ajeromi Ifelodun Local Government and the Lagos State Public Works Corporation (LSPWC). Together, they have demonstrated what can be achieved through collaboration and a shared commitment to improving the community’s infrastructure.",
-            ]}
-          />
-        );
-      case "2":
-        return (
-          <First
             images={[...imageurls]}
             title="Ajeromi-Ifelodun Local Government Hosts 2025 Budget Retreat"
             paragraphs={[
@@ -55,6 +43,13 @@ const NewsPageClient = () => {
             ]}
           />
         );
+      case "2":
+        return (
+          <Lightup
+            images={[newsimg, image2]}
+            title="Light Up Ajegunle: Spreading Joy & Unity Through Festive Celebrations"
+          />
+        );
       case "3":
         return (
           <YouthEmpowerment
@@ -64,16 +59,21 @@ const NewsPageClient = () => {
         );
       case "4":
         return (
-          <Lightup
-            images={[newsimg, image2]}
-            title="Light Up Ajegunle: Spreading Joy & Unity Through Festive Celebrations"
+          <WomenEmpowerment
+            images={[womenempower1, womenempower2]}
+            title="Empowering Women, Transforming Communities: Ajeromi-Ifelodun Women Summit & Mega Empowerment Program 2024"
           />
         );
       case "5":
         return (
-          <WomenEmpowerment
-            images={[womenempower1, womenempower2]}
-            title="Empowering Women, Transforming Communities: Ajeromi-Ifelodun Women Summit & Mega Empowerment Program 2024"
+          <First
+            images={[newsimg.src, image2.src]}
+            title="Empowering the Future: Hon Ayoola to Transform Lives"
+            paragraphs={[
+              "The race to transform Ajeromi Ifelodun through the rehabilitation and construction of 21 key roads is in full swing, and Hon. Fatai Adekunle Ayoola is setting an inspiring pace. Among the roads undergoing this transformative project, Tolu Road has become the latest focus of attention, with significant progress being made under the Council Chairman’s watchful eye.",
+              "Hon. Fatai Adekunle Ayoola has once again demonstrated his hands-on approach to governance by personally supervising the rehabilitation of Tolu Road. Working tirelessly day and night, the Council Boss has ensured that the project maintains momentum and adheres to the highest standards of quality. His commitment to delivering impactful results continues to resonate strongly with the residents of Ajeromi Ifelodun.",
+              "This remarkable progress on Tolu Road would not have been possible without the partnership between the Ajeromi Ifelodun Local Government and the Lagos State Public Works Corporation (LSPWC). Together, they have demonstrated what can be achieved through collaboration and a shared commitment to improving the community’s infrastructure.",
+            ]}
           />
         );
 
@@ -87,8 +87,8 @@ const NewsPageClient = () => {
 
       {/* Right Section - Search and Recent News */}
       <div className="hidden md:flex flex-col gap-10">
-        <SearchNews />
-        <RecentNews />
+        {/* <SearchNews />
+        <RecentNews /> */}
       </div>
     </div>
   );
