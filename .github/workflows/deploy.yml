@@ -3,7 +3,7 @@ name: Deploy Next.js App
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
@@ -20,9 +20,15 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/${{ secrets.VPS_USER }}/ajeromi_webapp # Adjust the path to your project on the VPS
+            cd /home/${{ secrets.SSH_USER }}
+            if [ ! -d "ajeromi_webapp/.git" ]; then
+              git clone https://github.com/ajeromi-ifelodun/ajeromi_website.git ajeromi_webapp
+            fi
+            cd ajeromi_webapp
+            git reset --hard origin/main  # Reset to the latest commit
             git pull origin main  # Pull latest changes
-            docker compose down  # Stop running containers
-            docker compose build --no-cache  # Build new image
+            
+            docker compose down || true  # Stop running containers
+            docker compose build --no-cache  # Build fresh image
             docker compose up -d  # Start in detached mode
-            docker system prune -af  # Optional: Clean up unused Docker images
+            docker system prune -af  # Clean up old Docker images
