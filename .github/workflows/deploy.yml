@@ -41,12 +41,17 @@ jobs:
             NODE_ENV=production
             EOF
 
-            # Stop running containers (if any)
-            docker-compose down || true  
+            # 🛑 Stop & Remove old ajeromi_container if running
+            docker stop ajeromi_container || true
+            docker rm ajeromi_container || true
 
-            # Build fresh image and start containers
+            # 🔄 Build fresh image and restart container
+            docker-compose down || true  
             docker-compose build --no-cache  
             docker-compose up -d  
 
-            # Clean up old images to save space
+            # ✅ Check if the container is running with the right name & port
+            docker ps
+
+            # 🧹 Clean up old images to save space
             docker system prune -af  
