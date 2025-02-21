@@ -3,9 +3,9 @@ import abobutimg2 from "../../../public/static/image/aboutimg2.png"
 import CustomImage from "../../_shared/input_comps/img";
 const Originfacts = () => {
   return (
-    <div className="parent-wrap flex">
+    <div className="parent-wrap flex flex-col md:flex-row">
       <div className=" pr-1 lg:pr-[10rem] flex flex-col gap-12 justify-center">
-        <h3 className="sectionheader text-[2.2rem] text-pjgreen">
+        <h3 className="sectionheader text-center  lg:text-start text-[1.8rem] md:text-[2.2rem] text-pjgreen ">
           The Origin of Ajegunle: Facts and Forgery
         </h3>
         <p>
@@ -24,7 +24,7 @@ const Originfacts = () => {
         </p>
       </div>
       <div>
-        <div className="w-[43rem] h-[30rem]  overflow-hidden rounded-xl">
+        <div className="w-full mt-5 lg:mt-0lg:w-[43rem] h-[30rem]  overflow-hidden rounded-xl">
           <CustomImage src={abobutimg2} alt="img" />
         </div>
       </div>

@@ -31,15 +31,15 @@ const Geograpghy = () => {
   ];
   return (
     <div className="parent-wrap relative">
-      <div className="grid grid-cols-2 gap-4 w-full p-8 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full p-8 relative">
         {items.map((item, index) => (
           <Infocard key={index} {...item} />
         ))}
-        <aside className="absolute top-[calc(50%-0.88rem)] right-[calc(50%-0.88rem)] ">
+        <aside className="hidden md:absolute top-[calc(50%-0.88rem)] right-[calc(50%-0.88rem)] ">
           <PlusIcon />
         </aside>
-        <aside className=" h-[80%] w-[0.5px] bg-[#8A8A8A] opacity-55 absolute right-[50%] top-[50%] transform -translate-y-[50%]" />
-        <aside className=" w-[80%] h-[0.5px] bg-[#8A8A8A] opacity-55 absolute right-[50%] top-[50%] transform translate-x-[50%]" />
+        <aside className=" h-[80%] w-[0.5px] bg-[#8A8A8A] opacity-55 hidden md:absolute right-[50%] top-[50%] transform -translate-y-[50%]" />
+        <aside className=" w-[80%] h-[0.5px] bg-[#8A8A8A] opacity-55 hidden md:absolute right-[50%] top-[50%] transform translate-x-[50%]" />
       </div>
     </div>
   );
