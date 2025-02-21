@@ -41,7 +41,9 @@ const First = ({ images,title,paragraphs}:{images: string [],title:string,paragr
       {/* News Images */}
 
       {/* News Article */}
-      <h3 className="text-[2.5rem] font-bold text-pjgreen mt-10">{title}</h3>
+      <h3 className="text-[1.5rem] md:text-[2.5rem] font-bold text-pjgreen mt-10">
+        {title}
+      </h3>
       <div className="w-[25rem] h-[5px] bg-pjgreen mt-2" />
 
       {paragraphs.map((paragraph, index) => (

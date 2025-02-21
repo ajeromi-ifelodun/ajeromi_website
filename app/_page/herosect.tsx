@@ -34,7 +34,7 @@ const Herosect = () => {
     );
   };
   return (
-    <div className="w-full h-screen  relative  mt-28">
+    <div className="w-full h-screen  relative  mt-14">
       <Swiper
         // modules={[Autoplay]}
         loop={true}
