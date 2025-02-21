@@ -57,8 +57,10 @@ const Lightup = ({
       {/* News Images */}
 
       {/* News Article */}
-      <h3 className="text-[2.5rem] font-bold text-pjgreen mt-10">{title}</h3>
-      <div className="w-[25rem] h-[5px] bg-pjgreen mt-2" />
+      <h3 className="text-[1.5rem] md:text-[2.5rem] font-bold text-pjgreen mt-10">
+        {title}
+      </h3>
+      <div className="w-full md:w-[25rem] h-[5px] bg-pjgreen mt-2" />
 
       <p className="mt-10">
         The Ajeromi-Ifelodun Local Government, under the leadership of Executive

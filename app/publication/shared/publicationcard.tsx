@@ -25,7 +25,7 @@ const Publicationcard = ({image,title}:{image:string,title:string}) => {
             
             className="border-solid border-black border-[1px] px-3 py-1 rounded-lg"
           >
-            Dowload
+            Download
           </a>
           <Link
             className="border-solid border-black border-[1px] px-3 py-1 rounded-lg"
