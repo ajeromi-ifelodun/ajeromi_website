@@ -107,8 +107,7 @@ const Lightup = ({
       </p>
       <p>
         Stay tuned for more community-driven initiatives in the coming year!
-        Hope this captures the energy of the event! Let me know if you’d like
-        any tweaks. 🎄✨🔥
+        Hope this captures the energy of the event!
       </p>
     </div>
   );

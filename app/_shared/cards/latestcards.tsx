@@ -6,11 +6,9 @@ const Latestcards = ({img,paragraph,title ,date}:{img:string,title:string,paragr
   return (
     <div className=" sm:w-[21rem] md:w-[21rem] lg:w-[23rem]">
       <div className="w-full h-[22rem] overflow-hidden rounded-xl">
-        <Image
+        <img
           src={img}
           alt="cardimg1"
-          width={300}
-          height={300}
           style={{
             width: "100%",
             height: "100%",

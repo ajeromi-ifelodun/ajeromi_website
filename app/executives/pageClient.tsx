@@ -13,31 +13,33 @@ const PageClient = () => {
       <div>
         <h3 className="sectionheader text-pjgreen">Executive Team</h3>
         <p className="opacity-50">Council Officials</p>
-        <div className="w-[25rem] h-[5px] bg-pjgreen mt-2" />
+        <div className="w-[85%] md:w-[25rem] h-[5px] bg-pjgreen mt-2" />
       </div>
-      <div className="grid grid-cols-5  gap-4 mt-8">
+      <div className="grid grid-cols-2 gap-1 md:grid-cols-5 md:gap-4 mt-8 items-stretch">
         <ExecutiveCard
           img={chairman}
           isLarge
           title="Executive Chairman"
           name="Hon. Fatai Ayinde Adekunle Ayoola"
         />
-        <ExecutiveCard
-          img={exec2}
-          title="Vice Chairman"
-          name="Hon. Lucky Uduikwe"
-        />
-        <ExecutiveCard
-          img={exec3}
-          title="Leader of the House"
-          name="Hon. Kehinde 
-Arogudada"
-        />
+        <div className="h-full flex flex-col">
+          <ExecutiveCard
+            img={exec2}
+            title="Vice Chairman"
+            name="Hon. Lucky Uduikwe"
+          />
+        </div>
+        <div className="h-full flex flex-col">
+          <ExecutiveCard
+            img={exec3}
+            title="Leader of the House"
+            name="Hon. Kehinde Arogudada"
+          />
+        </div>
         <ExecutiveCard
           img={exec4}
           title="Council Manager"
-          name="Hon. Rahmon Rafiu
-Babatunde"
+          name="Hon. Rahmon Rafiu Babatunde"
         />
         <ExecutiveCard
           img={exec5}
