@@ -20,7 +20,10 @@ const Footer = () => {
           <h3 className="footerheader">Contact Info</h3>
           <p>+234 812 3456 789</p>
           <p>info@ajeromi-ifelodun.lg.gov.ng</p>
-          <p>1, Baale Adeyemo Street, Ajegunle 110001,Lagos, Nigeria</p>
+          <p>
+            Ajeromi Ifelodun Government Council 1 Baale Street, Ajegunle, Lagos
+            102103, Lagos, Nigeria
+          </p>
           <div className="flex flex-col gap-3">
             <h3 className="footerheader mt-5">Follow Us</h3>
             <aside className="flex gap-5">
