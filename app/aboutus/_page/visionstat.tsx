@@ -9,13 +9,14 @@ const VisionStat = () => {
           <Binoculars />
         </aside>
       </div>
-      <div className="text-[#FFFFFF] w-full md:w-2/3 flex flex-col gap-5 justify-center">
-        <h3 className="sectionheader text-center md:text-end">Vision Statement</h3>
+      <div className="text-[#FFFFFF] w-full md:w-2/3  flex flex-col gap-5 justify-center">
+        <h3 className="sectionheader text-center md:text-end ">
+          vision Statement
+        </h3>
         <p className="text-center md:text-end">
-          To serve as a leading institution in the grassroots, focusing on
-          providing infrastructure, quality education, economic progression,
-          effective healthcare delivery, security, and improved welfare for the
-          masses.
+          To ensure a legacy of a government that is responsive to the
+          socio-economic dynamics of transforming the lifestyles of the
+          grassroots.
         </p>
       </div>
     </div>

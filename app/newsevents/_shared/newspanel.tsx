@@ -33,10 +33,12 @@ const Newspanel = ({
       <div className="flex flex-col gap-5 justify-center">
         <p className="font-bold text-[1.2rem]">{title}</p>
         <p>{paragraph}</p>
-        <Link href={`/newsevents/${index}`}>
-          <SolidPrimaryButton style={{ width: "10rem" }}>
-            Read More
-          </SolidPrimaryButton>
+        
+        <Link href={`/newsevents/${index}`} className="bg-pjgreen   w-[8rem] py-3 text-white flex justify-center rounded-xl">
+          
+              Read More
+            
+         
         </Link>
       </div>
     </div>
