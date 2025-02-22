@@ -4,7 +4,9 @@ import nodemailer from "nodemailer";
 // Allowed origins
 const allowedOrigins = [
   "http://localhost:3000",
-  "http://109.176.199.133:3000" // Your VPS frontend
+  "http://109.176.199.133:3000",
+  "https://ajeromi-ifelodun.lg.gov.ng",
+  "http://ajeromi-ifelodun.lg.gov.ng"
 ];
 
 // Function to handle CORS dynamically
