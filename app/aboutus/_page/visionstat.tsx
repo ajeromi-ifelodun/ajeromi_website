@@ -10,7 +10,7 @@ const VisionStat = () => {
         </aside>
       </div>
       <div className="text-[#FFFFFF] w-2/3  flex flex-col gap-5 justify-center">
-        <h3 className="sectionheader text-end">Mission Statement</h3>
+        <h3 className="sectionheader text-end">Vision Statement</h3>
         <p className='text-end'>
           To serve as a leading institution in the grassroots, focusing on
           providing infrastructure, quality education, economic progression,
