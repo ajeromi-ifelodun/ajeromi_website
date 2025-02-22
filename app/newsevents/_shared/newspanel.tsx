@@ -16,8 +16,8 @@ const Newspanel = ({
   
 }) => {
   return (
-    <div className="flex gap-16 border-t-[0.5px] border-b-[0.5px] border-greytext border-solid py-[4rem] pl-10">
-      <div className="w-[22rem] h-[16rem] overflow-hidden rounded-lg">
+    <div className="flex flex-col lg:flex-row gap-16 border-t-[0.5px] border-b-[0.5px] border-greytext border-solid  py-[4rem] md:py-[4rem]  pl-0 md:pl-10">
+      <div className="h-[16rem] lg:w-[22rem] overflow-hidden rounded-lg">
         <img
           src={img}
           alt="picture"

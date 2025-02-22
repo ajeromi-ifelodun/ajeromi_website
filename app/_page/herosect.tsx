@@ -27,14 +27,14 @@ const Herosect = () => {
         onClick={type === "left" ? handlePrev : handleNext}
         className={`absolute top-1/2 transform -translate-y-1/2 ${
           type === "left" ? "left-4" : "right-4"
-        } rounded-[50%] h-10 w-10 bg-pjgreen md:inline-grid place-items-center cursor-pointer z-[9]`}
+        } hidden rounded-[50%] h-10 w-10 bg-pjgreen md:inline-grid place-items-center cursor-pointer z-[9]`}
       >
         {type === "left" ? <ArrowLeft /> : <ArrowRight />}
       </div>
     );
   };
   return (
-    <div className="w-full h-screen  relative  mt-28">
+    <div className="w-full h-screen  relative  mt-14">
       <Swiper
         // modules={[Autoplay]}
         loop={true}

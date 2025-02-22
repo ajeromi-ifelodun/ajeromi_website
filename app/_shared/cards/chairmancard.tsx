@@ -27,7 +27,7 @@ const Chairmancard = () => {
           competitions to encourage academic excellence​
         </p>
       </div>
-      <div className="w-[28rem] h-[25rem] overflow-hidden rounded-xl">
+      <div className="w-full sm:w-[28rem] h-[25rem] overflow-hidden rounded-xl mt-5 md:mt-0">
         <Image
           src={charmanimg}
           alt="chairman"

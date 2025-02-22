@@ -27,7 +27,7 @@ const CountAnimation = ({
 
   return (
     <div className="text-pjgreen">
-      <div ref={ref} className="text-[5rem] font-bold ">
+      <div ref={ref} className="text-[2.5rem]   md:text-[5rem] font-bold ">
         {count}+
       </div>
       <p>{label}</p>
