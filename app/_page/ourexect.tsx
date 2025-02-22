@@ -2,7 +2,7 @@ import React from 'react'
 import Exectcard from '../_shared/cards/exectcard';
 import exec1 from "../../public/static/image/exec1.png"
 import exec2 from "../../public/static/image/exec2.png"
-import exec3 from "../../public/static/image/exec3.png"
+import exec5 from "../../public/static/image/execimg5.png";
 const Ourexects = () => {
   return (
     <div className="parent-wrap flex flex-col gap-10 bg-gradient-to-r from-[#01913C] to-[#002B12]  w-full text-white pb-10">
@@ -29,8 +29,8 @@ const Ourexects = () => {
         />
         <Exectcard
           h1
-          img={exec3}
-          title="Hon. Christopher Anyawu"
+          img={exec5}
+          title="Hon. Lukman Jimoh"
           paragraph="Secretary, Ajeromi-Ifelodun LGA"
         />
       </div>
