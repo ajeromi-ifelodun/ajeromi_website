@@ -21,7 +21,10 @@ const Mapsect = () => {
         <div className="text-greytext mt-5">
           <p>Ajeromi -Ifelodun LGA</p>
           <p>Ajegunle, Lagos</p>
-          <p>123 Example Cresent, Suite 342Ajeromi -Ifelodun LGA</p>
+          <p>
+            Ajeromi Ifelodun Government Council 1 Baale Street, Ajegunle, Lagos
+            102103, Lagos, Nigeria
+          </p>
         </div>
       </div>
     </div>

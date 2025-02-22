@@ -11,7 +11,7 @@ const VisionStat = () => {
       </div>
       <div className="text-[#FFFFFF] w-full md:w-2/3  flex flex-col gap-5 justify-center">
         <h3 className="sectionheader text-center md:text-end ">
-          vision Statement
+          Vision Statement
         </h3>
         <p className="text-center md:text-end">
           To ensure a legacy of a government that is responsive to the
