@@ -16,7 +16,7 @@ const VisionStat = () => {
 =======
       <div className="text-[#FFFFFF] w-full md:w-2/3  flex flex-col gap-5 justify-center">
         <h3 className="sectionheader text-center md:text-end ">
-          Vision Statement
+          Vision statement
         </h3>
         <p className="text-center md:text-end">
 >>>>>>> fcb06b0 (Minor changes)
