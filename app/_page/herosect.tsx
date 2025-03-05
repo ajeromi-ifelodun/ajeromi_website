@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import heroimg from "../../public/static/image/heroimg.png"
+import hero1 from "../../public/static/image/hero1.png"
 import { Buttonarrow ,ArrowLeft,ArrowRight } from '../_shared/icons/icons';
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
@@ -53,7 +54,7 @@ const Herosect = () => {
         <SwiperSlide className='h-full'>
           <div className='h-full'>
             <Image
-              src={heroimg}
+              src={hero1}
               alt="heroimg"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
