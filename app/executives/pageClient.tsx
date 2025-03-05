@@ -33,7 +33,7 @@ const PageClient = () => {
           <ExecutiveCard
             img={exec3}
             title="Leader of the House"
-            name="Hon. Kehinde Arogudada"
+            name=" Hon. Kehinde Arogundade"
           />
         </div>
         <ExecutiveCard

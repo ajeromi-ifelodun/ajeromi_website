@@ -9,22 +9,26 @@ const Chairmancard = () => {
           Meet Our Executive Chairman
         </h3>
         <p>
-          Hon. Fatai Adekunle Ayoola is the Executive Chairman of
+          Hon. Fatai Adekunle Ayoola is the Executive Chairman of
           Ajeromi-Ifelodun Local Government Area (LGA) in Lagos State, Nigeria,
-          and a member of the All Progressives Congress (APC). He has focused on
-          economic empowerment, including providing financial grants,
-          motorbikes, and other tools to over 3000 residents to promote
-          small-scale businesses and entrepreneurship​
-        </p>
-        <p className="mt-5">
-          His tenure has seen significant infrastructure developments, such as
-          the construction and rehabilitation of major roads and the
-          establishment of recreational facilities, including a standard
-          basketball courts, football pitches, in particular the reconstruction
-          of the  Maracana Stadium​ Hon. Ayoola has prioritized education by
-          building the Oba Abdul Fatai Aremu Oyegbami Library and ICT Center,
-          supplying learning materials to schools, and organizing essay
-          competitions to encourage academic excellence​
+          and a member of the All Progressives Congress (APC). His
+          administration which commenced July 25th, 2017 till date is premised
+          on Education, Health, Infrastructure, Youth development and Women
+          empowerment, Security, and welfare. His administration has empowered
+          over 5000 youths and business owners in the local government through
+          financial literacy, small and medium scale enterprise, distribution of
+          trade items and food palliatives to residents of Ajeromi-Ifelodun
+          local government. His landmark achievement in the area of education
+          cut across construction of L-Shape classrooms, Libraries with internet
+          facilities, basketball court and Five-A-Side astro turf football
+          pitches in public pry schools. He has supported youth innovations and
+          created platforms for youths to thrive in the local government. His
+          visionary leadership as the Council Mayor in the local government
+          ensured youths, women and business owners benefitted from the Women
+          and Youth summit where over half a billion naira was invested. And
+          Ajegunle through his visionary leadership has created an enabling
+          environment for sporting talents and activities to thrive through the
+          Maracanna sports complex in Tolu.
         </p>
       </div>
       <div className="w-full sm:w-[28rem] h-[25rem] overflow-hidden rounded-xl mt-5 md:mt-0">
