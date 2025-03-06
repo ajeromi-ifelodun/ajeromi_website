@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { chunkArray } from "../../helpers/helper";
-import education from "../../public/static/image/projectsimg/Education.png";
-import health from "../../public/static/image/projectsimg/Health.png";
-import infrastructure from "../../public/static/image/projectsimg/Infrastructure.png";
-import welfare from "../../public/static/image/projectsimg/Welfare.png";
+import education from "../../public/static/image/projectsimg/education.png";
+import health from "../../public/static/image/projectsimg/health.png";
+import infrastructure from "../../public/static/image/projectsimg/infrastructure.png";
+import welfare from "../../public/static/image/projectsimg/welfare.png";
 import sport from "../../public/static/image/projectsimg/sports.png";
 import security from "../../public/static/image/projectsimg/security.png";
 import youth from "../../public/static/image/projectsimg/youthdev.png";
