@@ -1,5 +1,5 @@
 import React from "react";
-import charmanimg from "../../../public/static/image/chairmanimg.png"
+import charmanimg from "../../../public/static/image/chairmanimg.jpeg"
 import Image from "next/image";
 const Chairmancard = () => {
   return (

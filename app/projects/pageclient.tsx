@@ -26,7 +26,7 @@ const projects = [
     image: education,
     description:
       "The administration of Ayoola Fatai Adekunle has successfully transformed public Pry schools in Ajegunle with state of the art facilities. The expansive classrooms are furnished and equipped with furnitures which are ideal for learning comfort. The public Pry schools are also equipped with libraries that are functional with Internet services.click the link below for videos on education programs and projects of the Ayoola's administration. ",
-    link: "https://www.facebook.com?projects/education",
+    link: ["https://www.facebook.com?projects/education"],
   },
   {
     id: 2,
@@ -34,6 +34,7 @@ const projects = [
     image: health,
     description:
       "Hon. Fatai Adekunle Ayoola as part of his administration's vision and mission for quality health service delivery in the local government has equipped Pry Health Centres with State of the art facilities. The PHC runs 24 hours service delivery. And the Ayoola's administration as part of his administration's promise is determined to construct PHC across the 9 wards in the local government.",
+    link: [],
   },
   {
     id: 3,
@@ -41,6 +42,7 @@ const projects = [
     image: infrastructure,
     description:
       "The administration of Hon. Fatai Adekunle Ayoola has constructed over 50 inner roads in Ajeromi-Ifelodun local government.  His administration is hoping to do more with construction of public facilities such as markets at Awodi-Ora and Achakpo, sporting facilities and reconstruction of Boundary Motor Park among others.",
+    link: [],
   },
   {
     id: 4,
@@ -48,6 +50,10 @@ const projects = [
     image: welfare,
     description:
       "The monthly stipend presented to the elderly residents in Ajeromi-Ifelodun local government is part of the social welfare package by the Ayoola's administration.  His government aside this has also set up emergency fund that are used to cater for medical bills of residents who underwent surgical operations among many other social interventions.",
+    link: [
+      "https://www.facebook.com/share/p/14vN6LNhvE/",
+      "https://www.facebook.com/share/v/1VUSKZzFqB/",
+    ],
   },
   {
     id: 5,
@@ -55,6 +61,10 @@ const projects = [
     image: sport,
     description:
       "The evolution of sports in Ajeromi-Ifelodun local government under the administration of Hon. Fatai Adekunle Ayoola cannot be over-emphasized. His administration has ensured that public Pry schools in the local government are equipped with sporting facilities such as the Five-A-Side astro turf football pitch, basketball court, table tennis and recently boxing ring. These are part of his administration's commitment towards the discovery and nurturing of sporting talents beyond the confines of Ajegunle.",
+    link: [
+      "https://www.facebook.com/share/v/1EdXxvJii8/",
+      "https://www.facebook.com/share/p/1AHWxzKu3V/",
+    ],
   },
   {
     id: 6,
@@ -62,7 +72,9 @@ const projects = [
     image: security,
     description:
       "The Hon. Fatai Adekunle Ayoola's administration has enhanced the effectiveness of security agencies I'm Ajeromi-Ifelodun local government with annual presentation of security patrol vehicles for safety of residents in the local government.  The Security Trust Funds that was inaugurated recently is part of his administration's legacy towards enhancing the structure and effectiveness of security agencies operating for the peaceful co-existence among residents of Ajeromi-Ifelodun Local Government.",
-    link: "https://m.facebook.com/story.php?story_fbid=pfbid02R66ZcUencD8Dmyzr6uukqNoqxzRNtFA2CkyKHrJXDkuFGuWHKcRkDKnBHUq5ct1fl&id=100068311735063&mibextid=Nif5oz ",
+    link: [
+      "https://m.facebook.com/story.php?story_fbid=pfbid02R66ZcUencD8Dmyzr6uukqNoqxzRNtFA2CkyKHrJXDkuFGuWHKcRkDKnBHUq5ct1fl&id=100068311735063&mibextid=Nif5oz",
+    ],
   },
   {
     id: 7,
@@ -70,8 +82,11 @@ const projects = [
     image: youth,
     description:
       "Over 5000 youths and women have been empowered over the last 7 years of the Ayoola's administration. The recent youth empowerment that witnessed over 3000 youths recieved N50,000 each highlighted part of the Ayoola's administration  commitment towards making youth and women productive in Ajegunle.",
-    link: "https://www.facebook.com/share/v/1Bvz9pRCwz/",
-    link2: "https://www.facebook.com/share/v/1DGcqQ4GHj/",
+    link: [
+      "https://www.facebook.com/share/v/1Bvz9pRCwz/",
+      "https://www.facebook.com/share/v/1DGcqQ4GHj/",
+      " https://www.facebook.com/share/v/15mXU7RJ42/",
+    ],
   },
 ];
 
@@ -123,11 +138,18 @@ const PageClient = () => {
                       {project?.link && "Links:"}
                     </p>
                     {project.link && (
-                      <Link href={project?.link}>{project?.link}</Link>
+                      project.link.map(( link,index) => (
+                        <Link
+                          href={link}
+                          key={index}
+                          className="text-blue-500 underline"
+                        >
+                          {link}
+                        </Link>
+                      ))
+                      
                     )}
-                    {project.link2 && (
-                      <Link href={project?.link2}>{project?.link2}</Link>
-                    )}
+                    
                   </motion.div>
                 )}
             </motion.div>
@@ -203,7 +225,7 @@ const PageClient = () => {
                     <h2 className="text-xl font-bold text-green-600">
                       {selectedProject.title}
                     </h2>
-                    <div className="flex justify-center gap-14 items-center">
+                    <div className="flex justify-center gap-14 items-center overflow-hidden rounded-lg">
                       <img
                         src={
                           typeof selectedProject.image === "string"
@@ -219,21 +241,19 @@ const PageClient = () => {
                           {selectedProject.link && "Links:"}
                         </p>
                         {selectedProject.link && (
-                          <Link
-                            href={selectedProject.link}
-                            className="text-blue-500 underline"
-                          >
-                            {selectedProject.link}
-                          </Link>
+                          selectedProject.link.map((link,index) => (
+                            <Link
+                              href={link}
+                              key={index}
+                              className="text-blue-500 underline"
+                            >
+                              {link}
+                            </Link>
+                          ))
+                            
+                          
                         )}
-                        {selectedProject.link2 && (
-                          <Link
-                            href={selectedProject.link2}
-                            className="text-blue-500 underline"
-                          >
-                            {selectedProject.link2}
-                          </Link>
-                        )}
+                        
                       </div>
                     </div>
                   </motion.div>
