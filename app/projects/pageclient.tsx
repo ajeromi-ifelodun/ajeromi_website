@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { chunkArray } from "../../helpers/helper";
+// import education from "../../public/static/image/projectsimg/education.png";
 import education from "../../public/static/image/projectsimg/education.png";
 import health from "../../public/static/image/projectsimg/health.png";
 import infrastructure from "../../public/static/image/projectsimg/infrastructure.png";
@@ -12,6 +13,10 @@ import youth from "../../public/static/image/projectsimg/youthdev.png";
 import { StaticImageData } from "next/image";
 import { link } from "fs";
 import Link from "next/link";
+
+//public/static/image/projectsimg/Education.png
+
+
 interface Project {
   id: number;
   title: string;
@@ -34,7 +39,7 @@ const projects = [
     image: health,
     description:
       "Hon. Fatai Adekunle Ayoola as part of his administration's vision and mission for quality health service delivery in the local government has equipped Pry Health Centres with State of the art facilities. The PHC runs 24 hours service delivery. And the Ayoola's administration as part of his administration's promise is determined to construct PHC across the 9 wards in the local government.",
-    link: [],
+    link: ["https://www.facebook.com/ajeromiifelodunlga"],
   },
   {
     id: 3,
@@ -42,7 +47,7 @@ const projects = [
     image: infrastructure,
     description:
       "The administration of Hon. Fatai Adekunle Ayoola has constructed over 50 inner roads in Ajeromi-Ifelodun local government.  His administration is hoping to do more with construction of public facilities such as markets at Awodi-Ora and Achakpo, sporting facilities and reconstruction of Boundary Motor Park among others.",
-    link: [],
+    link: ["https://www.facebook.com/ajeromiifelodunlga"],
   },
   {
     id: 4,
