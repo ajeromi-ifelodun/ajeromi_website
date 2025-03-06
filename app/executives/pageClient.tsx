@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ExecutiveCard from "./_shared/executivecard";
-import chairman from "../../public/static/image/chairmanimg.png";
+import chairman from "../../public/static/image/chairmanimg.jpeg";
 import exec2 from "../../public/static/image/exec2.png";
 import exec3 from "../../public/static/image/execimg3.png";
 import exec4 from "../../public/static/image/execimg4.png";
