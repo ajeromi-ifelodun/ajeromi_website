@@ -10,11 +10,14 @@ import sport from "../../public/static/image/projectsimg/sports.png";
 import security from "../../public/static/image/projectsimg/security.png";
 import youth from "../../public/static/image/projectsimg/youthdev.png";
 import { StaticImageData } from "next/image";
+import { link } from "fs";
+import Link from "next/link";
 interface Project {
   id: number;
   title: string;
   image: string | StaticImageData;
   description: string;
+  link?:string
 }
 const projects = [
   {
@@ -22,14 +25,15 @@ const projects = [
     title: "EDUCATION",
     image: education,
     description:
-      "The administration of Ayoola Fatai Adekunle has successfully transformed public Pry schools in Ajegunle with state of the art facilities. The expansive classrooms are furnished and equipped with furnitures which are ideal for learning comfort. The public Pry schools are also equipped with libraries that are functional with Internet services.click the link below for videos on education programs and projects of the Ayoola's administration https://www.facebook.com?projects/education",
+      "The administration of Ayoola Fatai Adekunle has successfully transformed public Pry schools in Ajegunle with state of the art facilities. The expansive classrooms are furnished and equipped with furnitures which are ideal for learning comfort. The public Pry schools are also equipped with libraries that are functional with Internet services.click the link below for videos on education programs and projects of the Ayoola's administration. ",
+    link: "https://www.facebook.com?projects/education",
   },
   {
     id: 2,
     title: "HEALTH",
     image: health,
     description:
-      "Hon. Fatai Adekunle Ayoola as part of his administration's vision and mission for quality health service delivery in the local government has equipped Pry Health Centres with State of the art facilities. The PHC runs 24 hours service delivery. And the Ayoola's administration as part of his administration's promise is determined to construct PHC across the 9 wards in the local government",
+      "Hon. Fatai Adekunle Ayoola as part of his administration's vision and mission for quality health service delivery in the local government has equipped Pry Health Centres with State of the art facilities. The PHC runs 24 hours service delivery. And the Ayoola's administration as part of his administration's promise is determined to construct PHC across the 9 wards in the local government.",
   },
   {
     id: 3,
@@ -58,6 +62,7 @@ const projects = [
     image: security,
     description:
       "The Hon. Fatai Adekunle Ayoola's administration has enhanced the effectiveness of security agencies I'm Ajeromi-Ifelodun local government with annual presentation of security patrol vehicles for safety of residents in the local government.  The Security Trust Funds that was inaugurated recently is part of his administration's legacy towards enhancing the structure and effectiveness of security agencies operating for the peaceful co-existence among residents of Ajeromi-Ifelodun Local Government.",
+    link: "https://m.facebook.com/story.php?story_fbid=pfbid02R66ZcUencD8Dmyzr6uukqNoqxzRNtFA2CkyKHrJXDkuFGuWHKcRkDKnBHUq5ct1fl&id=100068311735063&mibextid=Nif5oz ",
   },
   {
     id: 7,
@@ -65,6 +70,8 @@ const projects = [
     image: youth,
     description:
       "Over 5000 youths and women have been empowered over the last 7 years of the Ayoola's administration. The recent youth empowerment that witnessed over 3000 youths recieved N50,000 each highlighted part of the Ayoola's administration  commitment towards making youth and women productive in Ajegunle.",
+    link: "https://www.facebook.com/share/v/1Bvz9pRCwz/",
+    link2: "https://www.facebook.com/share/v/1DGcqQ4GHj/",
   },
 ];
 
@@ -111,7 +118,16 @@ const PageClient = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p>{selectedProject.description}</p>
+                    <p>
+                      {selectedProject.description}
+                      {project?.link && "Links:"}
+                    </p>
+                    {project.link && (
+                      <Link href={project?.link}>{project?.link}</Link>
+                    )}
+                    {project.link2 && (
+                      <Link href={project?.link2}>{project?.link2}</Link>
+                    )}
                   </motion.div>
                 )}
             </motion.div>
@@ -188,7 +204,6 @@ const PageClient = () => {
                       {selectedProject.title}
                     </h2>
                     <div className="flex justify-center gap-14 items-center">
-                      
                       <img
                         src={
                           typeof selectedProject.image === "string"
@@ -198,7 +213,28 @@ const PageClient = () => {
                         alt="Project"
                         className="w-full h-[25rem] object-cover my-4 rounded-lg"
                       />
-                      <p className="ml-12">{selectedProject.description}</p>
+                      <div className="ml-12 flex flex-col gap-4">
+                        <p className="">
+                          {selectedProject.description}
+                          {selectedProject.link && "Links:"}
+                        </p>
+                        {selectedProject.link && (
+                          <Link
+                            href={selectedProject.link}
+                            className="text-blue-500 underline"
+                          >
+                            {selectedProject.link}
+                          </Link>
+                        )}
+                        {selectedProject.link2 && (
+                          <Link
+                            href={selectedProject.link2}
+                            className="text-blue-500 underline"
+                          >
+                            {selectedProject.link2}
+                          </Link>
+                        )}
+                      </div>
                     </div>
                   </motion.div>
                 )}

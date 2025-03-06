@@ -32,8 +32,8 @@ const Nav = () => {
       link: "/departments",
     },
     {
-      name: "Publications",
-      link: "/publication",
+      name: "Projects",
+      link: "/projects",
     },
     {
       name: "Contact Us",

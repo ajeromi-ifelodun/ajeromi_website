@@ -51,8 +51,8 @@ const Herosect = () => {
         }}
         className="mySwiper h-full"
       >
-        <SwiperSlide className='h-full'>
-          <div className='h-full'>
+        <SwiperSlide className="h-full">
+          <div className="h-full">
             <Image
               src={hero1}
               alt="heroimg"
@@ -80,7 +80,7 @@ const Herosect = () => {
         <SwiperSlide>
           <div>
             <Image
-              src={heroimg}
+              src={hero1}
               alt="heroimg"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
@@ -106,7 +106,7 @@ const Herosect = () => {
         <SwiperSlide>
           <div>
             <Image
-              src={heroimg}
+              src={hero1}
               alt="heroimg"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
