@@ -11,8 +11,7 @@ import security from "../../public/static/image/security.png";
 import youth from "../../public/static/image/youthdev.png";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
-
-import exec6 from "../../public/static/image/execimg6.png";
+//public/static/image/projectsimg/Education.png
 
 interface Project {
   id: number;
