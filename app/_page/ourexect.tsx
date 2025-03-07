@@ -1,6 +1,5 @@
 import React from 'react'
 import Exectcard from '../_shared/cards/exectcard';
-// import exec1 from "../../public/static/image/exec1.png"
 import exec1 from "../../public/static/image/chairmanimg.jpeg"
 import exec2 from "../../public/static/image/exec2.png"
 import exec5 from "../../public/static/image/execimg5.png";
@@ -19,7 +18,7 @@ const Ourexects = () => {
         <Exectcard
           h1
           img={exec1}
-          title="Hon. Fatai Adekule Ayoola"
+          title="Hon. Fatai Adekunle Ayoola"
           paragraph="Executive Chairman, Ajeromi-Ifelodun LGA"
         />
         <Exectcard
