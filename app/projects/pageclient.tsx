@@ -2,20 +2,17 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { chunkArray } from "../../helpers/helper";
-// import education from "../../public/static/image/projectsimg/education.png";
-import education from "../../public/static/image/projectsimg/education.png";
-import health from "../../public/static/image/projectsimg/health.png";
-import infrastructure from "../../public/static/image/projectsimg/infrastructure.png";
-import welfare from "../../public/static/image/projectsimg/welfare.png";
-import sport from "../../public/static/image/projectsimg/sports.png";
-import security from "../../public/static/image/projectsimg/security.png";
-import youth from "../../public/static/image/projectsimg/youthdev.png";
+import education from "../../public/static/image/education.png";
+import health from "../../public/static/image/health.png";
+import infrastructure from "../../public/static/image/infrastructure.png";
+import welfare from "../../public/static/image/welfare.png";
+import sport from "../../public/static/image/sports.png";
+import security from "../../public/static/image/security.png";
+import youth from "../../public/static/image/youthdev.png";
 import { StaticImageData } from "next/image";
-import { link } from "fs";
 import Link from "next/link";
 
-//public/static/image/projectsimg/Education.png
-
+import exec6 from "../../public/static/image/execimg6.png";
 
 interface Project {
   id: number;

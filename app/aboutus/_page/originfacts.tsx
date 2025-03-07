@@ -31,7 +31,7 @@ const Originfacts = () => {
           }
         >
           <button className="bg-pjgreen text-white w-[12rem] text-[1.5rem] py-2 rounded-md flex justify-center items-center gap-2 mt-5">
-            <p>Full history about ajegunle click here to download</p>
+            <p>Click here to download the full history of Ajegunle</p>
           </button>
         </a>
       </div>
