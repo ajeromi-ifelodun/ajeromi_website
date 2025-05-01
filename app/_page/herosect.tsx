@@ -65,7 +65,7 @@ const Herosect = () => {
                 <h3 className="sectionheader -mt-4">AJEROMI-IFELODUN LGA</h3>
               </aside>
               <p className=" w-full lg:w-[42rem]">
-                Hassan Ajegunle is a cosmopolitan city in Lagos State. The history of
+                Ajegunle is a cosmopolitan city in Lagos State. The history of
                 Ajegunle dates back to the 19th century. And it is interesting
                 to know that the word Ajegunle which literally means This is
                 where my wealth inhabit
